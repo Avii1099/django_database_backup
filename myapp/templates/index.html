@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+     Index | Page 
+{% endblock title %}
+   
+{% block body %}
+  <h1>Load data</h1> 
+  <div>
+    <form action="{% url 'load_data' %}" method="POST">
+      {% csrf_token %}
+      <input type="file" name="data_file" >
+      <button type="submit">Restore Data</button>
+    </form>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div>
+    <a href="{% url 'databackup' %}">Backup</a>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  
+{% endblock body %}
+   
