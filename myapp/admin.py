@@ -6,4 +6,4 @@ from .models import StudentModel
 
 @admin.register(StudentModel)
 class StudentModelAdmin(admin.ModelAdmin):
-    list_display = ("city","email", "roll", "name")
+    list_display = ("city","email", "roll", "name", "id")[::-1]
